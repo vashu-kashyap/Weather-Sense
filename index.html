@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Scss/main.css" />
+    <title>WeatherSense - Your Forecast, Your Way</title>
+  </head>
+  <body>
+    <!-- header starting from here -->
+
+    <header>
+      <!-- ### Navbar -->
+
+      <nav class="navbar">
+        <!-- ###logo -->
+        <div class="logo">
+          <a href="#home"><h1>WeatherSense</h1></a>
+        </div>
+
+        <!-- ### Search Bar -->
+        <div class="search-bar">
+          <button id="search-btn">
+            <img src="./search.svg" alt="search-icon" />
+          </button>
+          <input type="text" id="searchquerry" placeholder="Search Cities..." />
+        </div>
+
+        <!-- ### User location -->
+        <div class="user-location">
+          <button id="location-btn"><img src="./map-pin.svg" alt="location-icon" /></button>
+          <p id="user-city"></p>
+          <span id="user-country">Country</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main staring from here -->
+
+    <main>
+      <!-- 3 day forecast section -->
+
+      <section class="weather-forecast">
+        <!-- ###heading -->
+        <h2>3 Days Weather Forecast</h2>
+
+        <div class="container">
+          <!-- ###btn-group -->
+          <div class="btn-group">
+            <button class="active" id="today">Today</button>
+            <button id="tomorrow">Tomorrow</button>
+            <button id="after-tomorrow">Day After Tomorrow</button>
+          </div>
+          <!-- ###dan&time -->
+          <div class="day-time">
+            <p id="day"></p>
+            <span id="time"></span>
+          </div>
+        </div>
+
+        <!-- ###card container -->
+
+        <div class="card-container">
+          <div class="weather-card active">
+            <div class="weather-info">
+              <div class="weather-info-container">
+                <p id="today-temp"><br /></p>
+                <span id="today-weather-condition">Haze</span>
+              </div>
+              <img
+                src="./sun.svg"
+                alt="weather-forecast icon"
+                id="weather-icon"
+              />
+            </div>
+            <div class="weather-details">
+              <ul>
+                <li>
+                  <p>High Temp:</p>
+                  <span id="today-high"> </span>
+                </li>
+                <li>
+                  <p>Humidity:</p>
+                  <span id="today-humidity"> </span>
+                </li>
+                <li>
+                  <p>Low Temp:</p>
+                  <span id="today-low"></span>
+                </li>
+                <li>
+                  <p>Feels Like:</p>
+                  <span id="today-feels"> </span>
+                </li>
+                <li>
+                  <p>Pressure:</p>
+                  <span id="today-pressure"> </span>
+                </li>
+                <li>
+                  <p>Sunrise:</p>
+                  <span id="today-sunrise"> </span>
+                </li>
+                <li>
+                  <p>Wind Speed:</p>
+                  <span id="today-windS"></span>
+                </li>
+                <li>
+                  <p>Sunset:</p>
+                  <span id="today-sunset"> </span>
+                </li>
+                <li>
+                  <p>Wind Deg:</p>
+                  <span id="today-windD"> </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-card" style="display: none">
+            <div class="weather-info">
+              <div class="weather-info-container">
+                <p id="tomorrow-temp"><br /></p>
+                <span id="tomorrow-weather-condition">Haze</span>
+              </div>
+              <img
+                src="./sun.svg"
+                alt="weather-forecast icon"
+                id="tomorrow-weather-icon"
+              />
+            </div>
+            <div class="weather-details">
+              <ul>
+                <li>
+                  <p>High Temp:</p>
+                  <span id="tomorrow-high"> </span>
+                </li>
+                <li>
+                  <p>Humidity:</p>
+                  <span id="tomorrow-humidity"> </span>
+                </li>
+                <li>
+                  <p>Low Temp:</p>
+                  <span id="tomorrow-low"></span>
+                </li>
+                <li>
+                  <p>Feels Like:</p>
+                  <span id="tomorrow-feels"> </span>
+                </li>
+                <li>
+                  <p>Pressure:</p>
+                  <span id="tomorrow-pressure"> </span>
+                </li>
+                <li>
+                  <p>Wind Speed:</p>
+                  <span id="tomorrow-windS"></span>
+                </li>
+                <li>
+                  <p>Wind Deg:</p>
+                  <span id="tomorrow-windD"> </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-card" style="display: none">
+            <div class="weather-info">
+              <div class="weather-info-container">
+                <p id="dayThree-temp"><br /></p>
+                <span id="dayThree-weather-condition">Haze</span>
+              </div>
+              <img
+                src="./sun.svg"
+                alt="weather-forecast icon"
+                id="dayAfterTomorrow-weather-icon"
+              />
+            </div>
+            <div class="weather-details">
+              <ul>
+                <li>
+                  <p>High Temp:</p>
+                  <span id="dayThree-high"> </span>
+                </li>
+                <li>
+                  <p>Humidity:</p>
+                  <span id="dayThree-humidity"> </span>
+                </li>
+                <li>
+                  <p>Low Temp:</p>
+                  <span id="dayThree-low"></span>
+                </li>
+                <li>
+                  <p>Feels Like:</p>
+                  <span id="dayThree-feels"> </span>
+                </li>
+                <li>
+                  <p>Pressure:</p>
+                  <span id="dayThree-pressure"> </span>
+                </li>
+                <li>
+                  <p>Wind Speed:</p>
+                  <span id="dayThree-windS"></span>
+                </li>
+                <li>
+                  <p>Wind Deg:</p>
+                  <span id="dayThree-windD"> </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- other large cities weather forecast -->
+
+      <section class="other-cities-weather">
+        <h2>Other Large Cities Weather Forecast</h2>
+
+        <div class="card-container">
+          <div class="city-weather-card">
+            <div class="city-country">
+              <h3 class="other-country"></h3>
+              <p class="other-large-city"></p>
+            </div>
+            <div class="citi-temprature">
+              <p class="other-city-temp">;C</p>
+              <img class="other-city-weather-icon" src="./sun.svg" alt=" weather icon" />
+            </div>
+          </div>
+          <div class="city-weather-card">
+            <div class="city-country">
+              <h3 class="other-country"></h3>
+              <p class="other-large-city"></p>
+            </div>
+            <div class="citi-temprature">
+              <p class="other-city-temp">C</p>
+              <img class="other-city-weather-icon" src="./sun.svg" alt=" weather icon" />
+            </div>
+          </div>
+          <div class="city-weather-card">
+            <div class="city-country">
+              <h3 class="other-country"></h3>
+              <p class="other-large-city"></p>
+            </div>
+            <div class="citi-temprature">
+              <p class="other-city-temp"></p>
+              <img class="other-city-weather-icon" src="./sun.svg" alt=" weather icon" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
