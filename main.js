@@ -47,7 +47,6 @@ const dayThreeWeatherIcon = document.getElementById(
   "dayAfterTomorrow-weather-icon"
 );
 
-console.log(dayThreeFeels, dayThreeHigh, dayThreeLow, dayThreePressure);
 // Getting the search input and search button elements
 const searchInput = document.getElementById("searchquerry");
 const searchButton = document.getElementById("search-btn");
@@ -71,6 +70,16 @@ function searchWeatherByCity() {
   fetchAndDisplayDayThreeWeather(searchCity);
 }
 
+function defaultTemp(city = "delhi", country = "India") {
+  fetchAndDisplayCurrentWeather(city);
+  fetchAndDisplayTomorrowWeather(city);
+  fetchAndDisplayDayThreeWeather(city);
+  userCity.innerHTML = `${city} ,`;
+  userCountry.innerHTML = country;
+}
+
+defaultTemp("Delhi", "India");
+
 // Getting the user's current location by geolocation coords
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -79,6 +88,8 @@ if ("geolocation" in navigator) {
   const defaultCity = "Delhi";
   const defaultCountry = "IN";
   fetchAndDisplayCurrentWeather(defaultCity);
+  fetchAndDisplayTomorrowWeather(defaultCity);
+  fetchAndDisplayDayThreeWeather(defaultCity);
   userCity.innerHTML = `${defaultCity} ,`;
   userCountry.innerHTML = defaultCountry;
 }
@@ -87,7 +98,7 @@ if ("geolocation" in navigator) {
 function successCallback(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
-  const geocoding_Url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${Api}`;
+  const geocoding_Url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${Api}`;
 
   fetch(geocoding_Url)
     .then((res) => res.json())
@@ -174,7 +185,7 @@ function filterTomorrowWeather(weatherData) {
 
 // Function to fetch and display tomorrow's weather data
 function fetchAndDisplayTomorrowWeather(cityName) {
-  const weather_url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${Api}`;
+  const weather_url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${Api}`;
 
   fetch(weather_url)
     .then((res) => res.json())
@@ -218,13 +229,12 @@ function filterDayThreeWeather(weatherData) {
 }
 
 function fetchAndDisplayDayThreeWeather(cityName) {
-  const weather_url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${Api}`;
+  const weather_url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${Api}`;
 
   fetch(weather_url)
     .then((res) => res.json())
     .then((weather_Data) => {
       const filteredData = filterDayThreeWeather(weather_Data.list);
-      console.log(filteredData);
       dayThreeTemp.innerHTML = `${Math.floor(
         filteredData[4].main.temp - 272.15
       )}&deg;C`;
@@ -280,7 +290,6 @@ function fetchWeatherOtherLargeCity(otherCityName, index = "0") {
   fetch(weather_url)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       // Update the UI with the weather data
       otherCountry[index].innerHTML = data.sys.country;
       otherLargeCity[index].innerHTML = data.name;
