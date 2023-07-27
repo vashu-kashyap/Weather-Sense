@@ -312,7 +312,7 @@ body {
     padding: 1rem 2rem;
   }
   .navbar .search-bar {
-    width: calc(100% - 4rem);
+    width: calc(100vw - 4rem);
     position: absolute;
     top: 90px;
   }
@@ -388,7 +388,7 @@ body {
     padding: 1rem 2rem;
   }
   .navbar .search-bar {
-    width: calc(100% - 4rem);
+    width: calc(100% - 2rem);
     margin-top: 3rem;
     order: 2;
   }
@@ -408,7 +408,7 @@ body {
   }
   .weather-forecast .container .btn-group button {
     padding: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .weather-forecast .container .day-time p {
     font-size: 1rem;

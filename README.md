@@ -54,7 +54,7 @@ Weather Sense is not just another weather app. It's your personal weather compan
 
 ### Useful resources
 
-- [openWeather Api](https://openweathermap.org/api) - This Api help for fecthing data of weather and also help me for reverse geocoding. 
+- [openWeather Api](https://openweathermap.org/api) - This Api help for fetching data for weather and also help me for reverse geocoding. 
 
 ## Author
 

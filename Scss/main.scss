@@ -357,61 +357,61 @@ body {
     padding: 1rem 2rem; // updated
 
     .search-bar {
-      width: calc(100% - 4rem); //updated
-      position: absolute; //updated
-      top: 90px; //updated
+      width: calc(100vw - 4rem);
+      position: absolute;
+      top: 90px;
     }
   }
 
   .weather-forecast {
-    padding: 1rem 2rem; //updated
+    padding: 1rem 2rem;
     margin-top: 3.5rem; // updated
     h2 {
-      font-size: 1.5rem; //updated
+      font-size: 1.5rem;
     }
 
     .container {
       .btn-group {
         button {
-          padding: 0.5rem 1rem; //updated
-          font-size: 1rem; //updated
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
         }
       }
 
       .day-time {
         p {
-          font-size: 1rem; //updated
+          font-size: 1rem;
         }
         span {
-          font-size: 1rem; //updated
-          width: 120px; //updated
+          font-size: 1rem;
+          width: 120px;
         }
       }
     }
 
     .card-container {
       justify-content: flex-start;
-      grid-template-columns: auto auto; //updated
-      margin: 0.5rem 0; //updated
-      gap: 1rem; //updated
+      grid-template-columns: auto auto;
+      margin: 0.5rem 0;
+      gap: 1rem;
       :last-child {
         column-span: 1/3;
       }
       .weather-card {
-        width: 345px; //updated
-        height: 275px; //updated
+        width: 345px;
+        height: 275px;
 
         .weather-info {
           img {
-            width: 120px; //updated
-            height: 135px; //updated
+            width: 120px;
+            height: 135px;
           }
         }
 
         .weather-details {
           ul {
             li {
-              font-size: 0.9rem; //updated
+              font-size: 0.9rem;
             }
           }
         }
@@ -420,31 +420,31 @@ body {
   }
 
   .other-cities-weather {
-    padding: 1rem 2rem; //updated
+    padding: 1rem 2rem;
     h2 {
-      font-size: 1.5rem; //updated
+      font-size: 1.5rem;
     }
 
     .card-container {
-      grid-template-columns: auto auto; //updated
-      justify-content: flex-start; //updated
-      gap: 1rem; //updated
+      grid-template-columns: auto auto;
+      justify-content: flex-start;
+      gap: 1rem;
       .city-weather-card {
-        width: 345px; //updated
+        width: 345px;
 
         .city-country {
           h3 {
-            font-size: 1rem; //updated
+            font-size: 1rem;
           }
 
           p {
-            font-size: 1.5rem; //updated
+            font-size: 1.5rem;
           }
         }
 
         .citi-temprature {
           p {
-            font-size: 2rem; //updated
+            font-size: 2rem;
           }
         }
       }
@@ -462,7 +462,7 @@ body {
 
 
     .search-bar {
-      width: calc(100% - 4rem); //updated
+      width: calc(100% - 2rem);
       margin-top: 3rem;
       order: 2;
     }
@@ -470,61 +470,60 @@ body {
     .user-location{
       order: 3;
       margin-top: 1rem;
-      width: calc(100vw - 2rem);
     }
 
   }
 
   .weather-forecast {
-    padding: 1rem 2rem; //updated
+    padding: 1rem 2rem;
     margin-top: 3.5rem; // updated
     h2 {
-      font-size: 1.5rem; //updated
+      font-size: 1.5rem;
     }
 
     .container {
       flex-direction: column;
       .btn-group {
         button {
-          padding: 0.5rem; //updated
-          font-size: 0.9rem; //updated
+          padding: 0.5rem;
+          font-size: 0.8rem;
         }
       }
 
       .day-time {
         p {
-          font-size: 1rem; //updated
+          font-size: 1rem;
         }
         span {
-          font-size: 1rem; //updated
-          width: 120px; //updated
+          font-size: 1rem;
+          width: 120px;
         }
       }
     }
 
     .card-container {
       justify-content: center;
-      grid-template-columns: auto ; //updated
-      margin: 0.5rem 0; //updated
-      gap: 1rem; //updated
+      grid-template-columns: auto ;
+      margin: 0.5rem 0;
+      gap: 1rem;
       :last-child {
         column-span: 1/3;
       }
       .weather-card {
-        width: 350px; //updated
-        height: fit-content; //updated
+        width: 350px;
+        height: fit-content;
 
         .weather-info {
           img {
-            width: 120px; //updated
-            height: 135px; //updated
+            width: 120px;
+            height: 135px;
           }
         }
 
         .weather-details {
           ul {
             li {
-              font-size: 0.9rem; //updated
+              font-size: 0.9rem;
             }
           }
         }
@@ -533,31 +532,31 @@ body {
   }
 
   .other-cities-weather {
-    padding: 1rem 2rem; //updated
+    padding: 1rem 2rem;
     h2 {
-      font-size: 1.5rem; //updated
+      font-size: 1.5rem;
     }
 
     .card-container {
-      grid-template-columns: auto ; //updated
-      justify-content: center; //updated
-      gap: 1rem; //updated
+      grid-template-columns: auto ;
+      justify-content: center;
+      gap: 1rem;
       .city-weather-card {
-        width: 350px; //updated
+        width: 350px;
 
         .city-country {
           h3 {
-            font-size: 1rem; //updated
+            font-size: 1rem;
           }
 
           p {
-            font-size: 1.5rem; //updated
+            font-size: 1.5rem;
           }
         }
 
         .citi-temprature {
           p {
-            font-size: 2rem; //updated
+            font-size: 2rem;
           }
         }
       }

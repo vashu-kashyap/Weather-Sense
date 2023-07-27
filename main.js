@@ -70,7 +70,7 @@ function searchWeatherByCity() {
   fetchAndDisplayDayThreeWeather(searchCity);
 }
 
-function defaultTemp(city = "delhi", country = "India") {
+function defaultTemp(city = "New York", country = "US") {
   fetchAndDisplayCurrentWeather(city);
   fetchAndDisplayTomorrowWeather(city);
   fetchAndDisplayDayThreeWeather(city);
@@ -78,15 +78,15 @@ function defaultTemp(city = "delhi", country = "India") {
   userCountry.innerHTML = country;
 }
 
-defaultTemp("Delhi", "India");
+defaultTemp("New York", "Us");
 
 // Getting the user's current location by geolocation coords
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 } else {
   console.log("Geolocation is not supported in this browser.");
-  const defaultCity = "Delhi";
-  const defaultCountry = "IN";
+  const defaultCity = "New York";
+  const defaultCountry = "Us";
   fetchAndDisplayCurrentWeather(defaultCity);
   fetchAndDisplayTomorrowWeather(defaultCity);
   fetchAndDisplayDayThreeWeather(defaultCity);
@@ -126,8 +126,8 @@ function successCallback(position) {
 // Error callback for geolocation
 function errorCallback(error) {
   console.error("Error getting location:", error.message);
-  const defaultCity = "Delhi";
-  const defaultCountry = "IN";
+  const defaultCity = "New York";
+  const defaultCountry = "Us";
   fetchAndDisplayCurrentWeather(defaultCity);
   userCity.innerHTML = `${defaultCity} ,`;
   userCountry.innerHTML = defaultCountry;
