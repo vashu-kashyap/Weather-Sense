@@ -37,7 +37,7 @@ Weather Sense is not just another weather app. It's your personal weather compan
 ### Links
 
 - Solution URL: [GitHub Solution Url](https://github.com/vashu-kashyap/Weather-Sense)
-- Live Site URL: [Netlify Live Url](https://64c248920b1f2002a1267d2d--storied-chimera-da6f39.netlify.app/)
+- Live Site URL: [Netlify Live Url](https://weathersenses.netlify.app/)
 
 ## My Process
 
